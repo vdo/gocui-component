@@ -99,6 +99,7 @@ func (f *Form) AddButton(label string, handler Handler) *Button {
 	)
 
 	button.AddHandler(gocui.KeyEnter, handler)
+	button.AddHandler(gocui.MouseLeft, handler)
 
 	f.buttons = append(f.buttons, button)
 	f.components = append(f.components, button)
